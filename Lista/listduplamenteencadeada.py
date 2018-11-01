@@ -38,6 +38,10 @@ class Lista:
         return saida
       
     def __getitem__(self, i):
+        '''
+        Busca de elemento por meio da atribuição - item[index] - 
+        :param i: Index do item a ser buscado
+        '''
         atual = self.primeiro
         cont = -1
         while atual.proximo is not None and cont != i:
@@ -47,6 +51,16 @@ class Lista:
             return atual.item
         else:
             return IndexError
+        
+    def __conteins__(self,item):
+        '''
+        Método que retorna True ou False para saber se o elemento está na lista
+        por meio - item in Lista - 
+        '''
+        aux = self.primeiro
+        while aux.proximo is not None and aux.item != item:
+            aux = aux.proximo
+        return aux.item
           
     def anexar(self,item):
       '''
@@ -56,32 +70,43 @@ class Lista:
       self.ultimo.proximo = _No(self.ultimo,None,item)
       self.ultimo = self.ultimo.proximo
       self.tamanho += 1
+      
 
-    def add_ordenado(self, i, item):
+    def adicionar_index(self, i, item):
       '''
       Adiciona um item qualquer em uma posição especifica
       :param i: posição(index) do item a ser inserido
       :param item: Item a ser inserido
       '''
-        cont = 0
-        posicao = self.primeiro
-        while i != cont or self.proximo is None:
-            posicao = posicao.proximo
-            cont += 1
-        posicao.anterior = _No(posicao.anterior,posicao,item)
-        posicao.anterior.anterior.proximo = posicao.anterior
-        self.tamanho += 1
+      cont = -1
+      posicao = self.primeiro
+      while i != cont or posicao.proximo is None:
+          posicao = posicao.proximo
+          cont += 1
+          posicao.anterior = _No(posicao.anterior,posicao,item)
+          posicao.anterior.anterior.proximo = posicao.anterior
+          self.tamanho += 1
 
     def remove_no_fim(self,):
       '''
       Remove o ultimo item da lista
       '''
-        aux = self.ultimo
-        self.ultimo = self.ultimo.anterior
-        self.ultimo.proximo = None
-        aux.anterior = None
-        val = aux.item
-        aux.item = None
-        del(aux)
-        self.tamanho -= 1
-        return val
+      aux = self.ultimo
+      self.ultimo = self.ultimo.anterior
+      self.ultimo.proximo = None
+      aux.anterior = None
+      val = aux.item
+      aux.item = None
+      del(aux)
+      self.tamanho -= 1
+      return val
+
+if __name__ == '__main__':
+    l = Lista()
+    l.anexar('a')
+    l.anexar('b')
+    l.anexar('c')
+    l.adicionar_index(0,'rapariga')
+    print('a' in l)
+    print(l)
+    
