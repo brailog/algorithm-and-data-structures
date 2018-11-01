@@ -40,18 +40,3 @@ def insertionsort(vetor,vetor_size):
 	return vetor
 
 print('insertionsort: ',insertionsort(insertion_lista,len(insertion_lista)))
-
-# def shellsort(v,	N):
-# 	h=1
-# 	while h	< N//3:
-# 		h =	3*h	+1
-# 		while h	>= 1:
-# 			for	i in range(h,N):
-# 				j = i
-# 				while j	>= h and v[j] < v[j-h]:
-# 					trocar(v,j,j-h)
-# 					j -= h
-# 			h//=3
-# 	return v
-
-# print('--',shellsort(insertion_lista,len(insertion_lista)))
