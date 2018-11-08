@@ -106,7 +106,6 @@ if __name__ == '__main__':
     l.anexar('a')
     l.anexar('b')
     l.anexar('c')
-    l.adicionar_index(0,'rapariga')
     print('a' in l)
     print(l)
     
