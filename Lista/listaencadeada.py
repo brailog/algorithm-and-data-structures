@@ -154,7 +154,6 @@ class ListaEncadeada:
         self.tamanho_lista += -1
         return item
 
-
 if __name__ == '__main__':
     l = ListaEncadeada()
     l.inserir('a')
