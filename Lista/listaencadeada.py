@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov  1 17:19:54 2018
-
 Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
 """
 

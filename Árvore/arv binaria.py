@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
+"""
+
 class No:
     def __init__(self,chave=None,valor=None,esquerda=None,direita=None):
         self.chave = chave

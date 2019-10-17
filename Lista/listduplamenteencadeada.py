@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
+"""
+
 class _No:
     def __init__(self,anterior,proximo,item):
         self.anterior = anterior

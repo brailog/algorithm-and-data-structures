@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
+"""
+
 import numpy as np
 
 class No:

@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+"""
+Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
+"""
 
 class GrafoLista:
     def __init__(self,arestas,direcionado=False):

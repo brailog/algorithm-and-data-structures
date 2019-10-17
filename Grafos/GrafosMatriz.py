@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 14 03:15:37 2018
-
-@author: Gabriel
+Copyright(c) 2018 Gabriel Ramos Rodrigues Oliveira
 """
+
 class GrafoMatriz:
     def __init__(self,arestas,direcionado=False):
         self._tree = False
